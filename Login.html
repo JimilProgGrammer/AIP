@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <!-- Custom font for this page -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+  <!-- Google Material Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <style type="text/css">
+		body {
+			background: url('https://img3.akspic.com/image/21579-imac_pro-mountain-badlands-atmosphere-mountainous_landforms-1920x1080.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			font-family: 'Montserrat', sans-serif;
+		}
+		h1 {
+			color: white;
+		}
+	</style>
+</head>
+
+<body>
+
+		<br/><br/>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<a href="./index.html">
+						<i class="material-icons" style="font-size: 50px; color: white;">
+							home
+						</i>
+					</a>
+					<center>
+						<h1>
+							<b>Get Started With</b>
+							<img src="./img/aip_logo.png" alt="AIP Logo" height="50px;" style="border-radius: 5px;">
+						</h1>
+					</center>
+				</div>
+			</div>
+		</div>
+		<br/>
+		<div class="container">
+			<div class="row">
+				<!-- 1st Column: Sign Up Form -->
+				<div class="col-md-6 col-sm-6 col-xs-6">
+					<div class="card shadow-lg p-3 mb-5 rounded text-white" style="background: rgba(0, 0, 0, 0.4)">
+						<center>
+							<h2>Sign Up here.</h2>
+							<form>
+								<!-- Row 1 -->
+								<div class="form-row">
+									<!-- First Name Field -->
+									<div class="col">
+										<label for="fname">First Name: </label>
+										<input type="text" minlength="2" maxlength="100" class="form-control" required/>
+									</div>
+									<!-- Last Name Field -->
+									<div class="col">
+										<label for="lname">Last Name: </label>
+										<input type="text" minlength="2" maxlength="100" class="form-control" required/>
+									</div>
+								</div>
+								<br/>
+								<!-- Row 2 -->
+								<div class="form-row">
+									<!-- Address field -->
+									<div class="col">
+										<label for="addr">Address: </label>
+										<input type="text" minlength="15" maxlength="200" class="form-control" required/>
+									</div>
+								</div>
+								<br/>
+								<!-- Row 3 -->
+								<div class="form-row">
+									<!-- State Field -->
+									<div class="col">
+										<label for="State">State: </label>
+										<select class="form-control" required>
+											<option value="MH">Maharashtra</option>
+											<option value="GJ">Gujarat</option>
+											<option value="RJ">Rajasthan</option>
+										</select>
+									</div>
+									<!-- City Field -->
+									<div class="col">
+										<label for="city">City: </label>
+										<input type="text" class="form-control" minlength="3" maxlength="50" required/>
+									</div>
+									<!-- Zip Code Field -->
+									<div class="col">
+										<label for="zip">Pin Code: </label>
+										<input type="number" class="form-control" minlength="6" maxlength="10" required/>
+									</div>
+								</div>
+								<br/>
+								<!-- Row 4 -->
+								<div class="form-row">
+									<!-- username field -->
+									<div class="col">
+										<label for="username">Username: </label>
+										<input type="text" class="form-control" minlength="8" maxlength="50" required/>
+									</div>
+									<!-- Password field -->
+									<div class="col">
+										<label for="pwd">Password: </label>
+										<input type="password" class="form-control" minlength="8" maxlength="50" required/>
+									</div>
+								</div>
+								<br/>
+								<!-- Row 5 -->
+								<div class="form-row">
+									<div class="col">
+										<button type="submit" class="btn btn-light">Sign Up</button>&nbsp;&nbsp;&nbsp;&nbsp;
+										<button type="reset" class="btn btn-light">Reset</button>
+									</div>
+								</div>
+							</form>
+
+						</center>
+					</div>
+				</div>
+				<!-- 2nd Column: Login Form -->
+				<div class="col-md-6 col-sm-6 col-xs-6">
+					<!-- Row 1 -->
+					<div class="row">
+						<div class="container">
+							<div class="card shadow-lg p-3 mb-5 rounded text-white" style="background: rgba(0, 0, 0, 0.4)">
+								<center>
+									<h2>Login here.</h2>
+									<form>
+										<!-- Form Row 1 -->
+										<div class="form-row">
+											<!-- Username field -->
+											<div class="col">
+												<label for="username">Username: </label>
+												<input type="text" class="form-control" minlength="8" required/>
+											</div>
+											<!-- Password Field -->
+											<div class="col">
+												<label for="pwd">Password: </label>
+												<input type="password" class="form-control" minlength="8" required/>
+											</div>
+										</div>
+										<br/>
+										<!-- Form Row 2 -->
+										<div class="form-row">
+											<div class="col">
+												<button type="submit" class="btn btn-light">Login</button>&nbsp;&nbsp;&nbsp;&nbsp;
+												<button type="reset" class="btn btn-light">Reset</button>
+											</div>
+										</div>
+									</form>
+								</center>
+							</div>
+						</div>
+					</div>
+					<!-- Row 2 -->
+					<div class="row">
+						<div class="container">
+							<div class="card shadow-lg p-3 mb-5 rounded text-white" style="background: rgba(0, 0, 0, 0.4)">
+								<h4>Our Users</h4>
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th scope="col">#</th>
+											<th scope="col">First Name</th>
+											<th scope="col">Last Name</th>
+											<th scope="col">Handle</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">1</th>
+											<td>Jack</td>
+											<td>Andressen</td>
+											<td>oraclecloudaccount</td>
+										</tr>
+										<tr>
+											<th scope="row">2</th>
+											<td>Norman</td>
+											<td>Bates</td>
+											<td>sapincrocks</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

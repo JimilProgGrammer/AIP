@@ -82,6 +82,40 @@
           -webkit-transform: scaleY(1.0);
         }
       }
+      .sprite {
+        background-image: url('./img/spritesheet.png');
+        background-repeat: no-repeat;
+        display: block;
+      }
+
+      .sprite-opt1 {
+        width: 450px;
+        height: 246px;
+        background-position: -5px -5px;
+      }
+
+      .sprite-opt2 {
+        width: 500px;
+        height: 237px;
+        background-position: -5px -261px;
+      }
+
+      .sprite-opt5 {
+        width: 426px;
+        height: 400px;
+        background-position: -515px -5px;
+      }
+
+      a[id="loginBtn"] {
+        background-color: #47827E;
+      }
+
+      ul {
+        text-align: left;
+        color: whitesmoke;
+        line-height: 2.5em;
+        list-style: square;
+      }
     </style>
 
   </head>
@@ -136,7 +170,7 @@
           <h2 class="text-white-50 mx-auto mt-2 mb-5">
             Automated Invoice Processing, for faster ERP and P2P cycles.
           </h2>
-          <a href="./Login.html" class="btn btn-primary js-scroll-trigger">Get Started</a>
+          <a href="./Login.html" id="loginBtn" class="btn btn-primary js-scroll-trigger">Get Started</a>
         </div>
       </div>
     </header>
@@ -152,10 +186,28 @@
               to automate and fasten your company's ERP cycle, by extracting useful information
               from generated invoices in a swift fashion.
             </p>
+            <ul>
+              <li>Invoice Processing</li>
+              <li>Voucher Entry</li>
+            </ul>
           </div>
         </div>
-        <!-- <img src="img/opt2.png" class="img-fluid" alt=""> -->
-        <img src="img/opt5.png" class="img-fluid" alt="">
+        <!-- CSS Sprite for multiple images gallery -->
+        <div class="img_sprite">
+          <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+              <div class="row" style="margin-bottom: 25px;">
+                <i class="sprite sprite-opt1"></i>
+              </div>
+              <div class="row" style="margin-bottom: 25px;">
+                <i class="sprite sprite-opt2"></i>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+              <i class="sprite sprite-opt5"></i>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 

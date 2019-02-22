@@ -8,7 +8,7 @@ function showSignUp() {
 }
 
 function renderBackground() {
-    document.body.style.background = "linear-gradient(to right, #43c6ac, #f8ffae)";
+    document.body.style.background = "linear-gradient(to right, #ece9e6, #ffffff);";
 }
 
 function validator(inputtxt) {

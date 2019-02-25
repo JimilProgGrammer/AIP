@@ -59,3 +59,17 @@ function applyPwdRegex(field_to_apply_regex) {
     field_to_apply_regex.pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}";
     field_to_apply_regex.title = "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
 }
+
+var newWindow;
+function knowPreference() {
+    console.log("In window call");
+    newWindow = window.open("", "Your Preferences", "width=400, height=250");
+    newWindow.moveBy(440, 200);
+    newWindow.document.write("<p style='font-family:'Poppins';color:black;'>Tell us for what purpose do you wish to sign up for our service. This will help us know you better.</p>");
+    newWindow.document.write("<input type='text'/>");
+    newWindow.document.write("<button class='btn btn-light' onclick='destroyWindow()'>Submit</button>");
+}
+
+function destroyWindow(){
+    newWindow.close();
+}

@@ -1,12 +1,3 @@
-function showSignUp() {
-    var signUpDiv = document.getElementById("signUpDiv");
-    if (signUpDiv.style.display === "none") {
-        signUpDiv.style.display = "block";
-    } else {
-        signUpDiv.style.display = "none";
-    }
-}
-
 function renderBackground() {
     document.body.style.background = "linear-gradient(to right, #ece9e6, #ffffff);";
 }

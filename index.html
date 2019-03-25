@@ -110,6 +110,10 @@
         background-color: #47827E;
       }
 
+      a[id="invoiceBtn"] {
+        background-color: #47827E;
+      }
+
       ul {
         text-align: left;
         color: whitesmoke;
@@ -121,7 +125,6 @@
   </head>
 
   <body id="page-top" onload="myFunction()">
-
     <!-- Pre-loader Div -->
     <div id="spinner" class="spinner">
       <div class="rect1"></div>
@@ -157,9 +160,9 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="./Dynamic-Invoice-Generator/invoice.html">Example Invoice</a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -174,6 +177,8 @@
             Automated Invoice Processing, for faster ERP and P2P cycles.
           </h2>
           <a href="./Login.html" id="loginBtn" class="btn btn-primary js-scroll-trigger">Get Started</a>
+          &nbsp;&nbsp;&nbsp;
+          <a href="./Dynamic-Invoice-Generator/invoice.html" id="invoiceBtn" class="btn btn-primary js-scroll-trigger">Example Invoice</a>
         </div>
       </div>
     </header>
@@ -405,6 +410,8 @@
     <script src="js/grayscale.min.js"></script>
   </div>
 
+  </body>
+
   <!-- Custom JS for pre-loader -->
   <script>
       var myVar;
@@ -418,7 +425,5 @@
         document.getElementById("content").style.display = "block";
       }
     </script>
-
-  </body>
 
 </html>

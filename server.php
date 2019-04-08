@@ -1,7 +1,5 @@
 <?php
-
     session_start();
-
     // Initializing variables
     $id = "";
     $pwd = "";
@@ -53,5 +51,25 @@
             header('location: welcome.php');
         }
     }
+    if (isset($_POST['login_user'])) {
+        $id = mysqli_real_escape_string($db, $_POST['username']);
+        $pwd = mysqli_real_escape_string($db, $_POST['password']);
+
+        if (count($errors) == 0) {
+            $password = md5($pwd);
+            $query = "SELECT * FROM users WHERE id='$id' AND pwd='$password'";
+            $results = mysqli_query($db, $query);
+            if (mysqli_num_rows($results) == 1) {
+                $_SESSION['username'] = $id;
+                $_SESSION['success'] = "You are now logged in";
+                header('location: welcome.php');
+            } else {
+                array_push($errors, "Wrong username/password combination");
+            }
+        }
+    }
 
 ?>
+<html>
+    <?php include('errors.php');?>
+</html>

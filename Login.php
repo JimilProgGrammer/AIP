@@ -98,7 +98,6 @@
 						<center>
 							<h2><b>Sign Up here.</b></h2>
 							<form name="signUpForm" method="POST" action="server.php">
-								<?php include('errors.php'); ?>
 								<!-- Row 1 -->
 								<div class="form-row">
 									<!-- First Name Field -->
@@ -180,25 +179,24 @@
 								<center>
 									<h2><b>Login here.</b></h2>
 									<form name="loginForm" method="POST" action="server.php">
-										<?php include('errors.php'); ?>
 										<!-- Form Row 1 -->
 										<div class="form-row">
 											<!-- Username field -->
 											<div class="col">
 												<label for="username">EmailId: </label>
-												<input type="email" class="form-control" minlength="8" required/>
+												<input type="email" name="username" class="form-control" minlength="8" required/>
 											</div>
 											<!-- Password Field -->
 											<div class="col">
 												<label for="pwd">Password: </label>
-												<input type="password" class="form-control" minlength="8" required/>
+												<input type="password" name="password" class="form-control" minlength="8" required/>
 											</div>
 										</div>
 										<br/>
 										<!-- Form Row 2 -->
 										<div class="form-row">
 											<div class="col">
-												<button type="submit" class="btn btn-light">Login</button>&nbsp;&nbsp;&nbsp;&nbsp;
+												<button type="submit" class="btn btn-light" name="login_user">Login</button>&nbsp;&nbsp;&nbsp;&nbsp;
 												<button type="button" class="btn btn-light" id="showSignUpBtn">Sign Up</button>
 											</div>
 										</div>

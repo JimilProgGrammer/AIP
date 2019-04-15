@@ -1,75 +1,21 @@
 <?php
-    session_start();
-    // Initializing variables
-    $id = "";
-    $pwd = "";
-    $fname = "";
-    $lname = "";
-    $address = "";
-    $state = "";
-    $city = "";
-    $pincode = 0;
-    $errors = array();
 
-    //Connecting to database
-    $db = mysqli_connect('localhost','phpmyadmin','root','aip');
+/**
+ * Laravel - A PHP Framework For Web Artisans
+ *
+ * @package  Laravel
+ * @author   Taylor Otwell <taylor@laravel.com>
+ */
 
-    /*
-     * REGISTER USER
-     */
-    if(isset($_POST['reg_user'])) {
-        // receive all input values from form
-        $fname = mysqli_real_escape_string($db, $_POST['fnameField']);
-        $lname = mysqli_real_escape_string($db, $_POST['lnameField']);
-        $address = mysqli_real_escape_string($db, $_POST['addressField']);
-        $state = mysqli_real_escape_string($db, $_POST['stateField']);
-        $city = mysqli_real_escape_string($db, $_POST['cityField']);
-        $pincode = mysqli_real_escape_string($db, $_POST['pinCodeField']);
-        $id = mysqli_real_escape_string($db, $_POST['unameField']);
-        $pwd = mysqli_real_escape_string($db, $_POST['passwordField']);
+$uri = urldecode(
+    parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)
+);
 
-        // first check the database to make sure 
-        // a user does not already exist with the same email
-        $user_check_query = "SELECT * FROM users WHERE id='$id' LIMIT 1";
-        $result = mysqli_query($db, $user_check_query);
-        $user = mysqli_fetch_assoc($result);
-        if ($user) { // if user exists
-            if ($user['id'] === $id) {
-              array_push($errors, "User already exists!");
-            }
-        }
+// This file allows us to emulate Apache's "mod_rewrite" functionality from the
+// built-in PHP web server. This provides a convenient way to test a Laravel
+// application without having installed a "real" web server software here.
+if ($uri !== '/' && file_exists(__DIR__.'/public'.$uri)) {
+    return false;
+}
 
-        // Finally, register user if there are no errors in the form
-        if (count($errors) == 0) {
-            $password = md5($pwd); //encrypt the password before saving in the database
-
-            $query = "INSERT INTO users 
-                    VALUES('$fname', '$lname', '$address', '$state', '$city', '$pincode', '$id', '$password')";
-            mysqli_query($db, $query);
-            $_SESSION['username'] = $id;
-            $_SESSION['success'] = "You are now logged in";
-            header('location: welcome.php');
-        }
-    }
-    if (isset($_POST['login_user'])) {
-        $id = mysqli_real_escape_string($db, $_POST['username']);
-        $pwd = mysqli_real_escape_string($db, $_POST['password']);
-
-        if (count($errors) == 0) {
-            $password = md5($pwd);
-            $query = "SELECT * FROM users WHERE id='$id' AND pwd='$password'";
-            $results = mysqli_query($db, $query);
-            if (mysqli_num_rows($results) == 1) {
-                $_SESSION['username'] = $id;
-                $_SESSION['success'] = "You are now logged in";
-                header('location: welcome.php');
-            } else {
-                array_push($errors, "Wrong username/password combination");
-            }
-        }
-    }
-
-?>
-<html>
-    <?php include('errors.php');?>
-</html>
+require_once __DIR__.'/public/index.php';
